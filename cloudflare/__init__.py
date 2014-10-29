@@ -85,6 +85,9 @@ class CloudFlare( object ):
     def ban( self, key ):
         return self.callAPI( "a=%s&email=%s&tkn=%s&key=%s" % ( 'ban', self.EMAIL, self.TOKEN, key ) )
 
+    # Unlist IP
+    def nul( self, key ):
+        return self.callAPI( "a=%s&email=%s&tkn=%s&key=%s" % ( 'nul', self.EMAIL, self.TOKEN, key ) )
 
     # Create new DNS Record
     def rec_new( self, zone, _type, content, name, service_mode ):
